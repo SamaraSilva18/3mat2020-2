@@ -51,6 +51,6 @@ console.log(vetor1)
 //1º parâmetro: A posição de remoção
 //2º parâmetro: A quantidade de elementos a remover (>0)
 //O splice() SEMPRE retornará um VETOR como resultado, mesmo que o número de
-//itens removidos esteja entre 0 e 1
+//itens removidos esteja entre 0 e 1.
 let removido5 = vetor1.splice(3, 1)
 console.log(vetor1, removido5)
