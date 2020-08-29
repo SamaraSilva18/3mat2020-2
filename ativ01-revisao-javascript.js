@@ -103,15 +103,14 @@ let estado9 = {
 
 estadosNe.push(estado9)
 
+console.log(estadosNe)
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da
       segunda pela primeira. 
 */
 
-let densidadedemográfica = (area, populacao) => populacao / area
-
-densidadedemográfica()
+let densidadedemográfica = (a, p) => p / a
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -123,17 +122,30 @@ densidadedemográfica()
 
 */
 
-for(let i = 1; i <= 9; i++) {
-    estadosNe[i].densidade = densidadedemográfica()
+for(let i = 0; i < estadosNe.length; i++) {
+    estadosNe[i]["Densidade Demográfica"] = (densidadedemográfica(estadosNe[i].area, estadosNe[i].populacao))
+    delete estadosNe[i].sigla
+    console.log(estadosNe[i])
 } 
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
+let extrator = (estado) => {
+for(let propriedade in estado){
+    console.log('Propriedade: ' + propriedade + '; Valor: ' + estado[propriedade])
+}
+}
 
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
-      invoque a função escrita em 4) para exibi-lo.
+      invoque a função escrita em 4) para exibi-lo. 
+      
+*/
+
+for(let objeto of estadosNe){
+    extrator(objeto)
+}
 
 /*
    6)
@@ -147,3 +159,15 @@ for(let i = 1; i <= 9; i++) {
          já existentes, e assim por diante.
 
 */
+
+let vetor = []
+vetor.push(estado1.nome);
+vetor.unshift(estado2.nome);
+vetor.splice(1, 0, estado3.nome);
+vetor.splice(1, 0, estado4.nome);
+vetor.splice(2, 0, estado5.nome);
+vetor.splice(1, 0, estado6.nome);
+vetor.splice(4, 0, estado7.nome);
+vetor.splice(2, 0, estado8.nome);
+vetor.splice(1, 0, estado9.nome);
+console.log(vetor)
