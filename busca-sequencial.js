@@ -1,6 +1,6 @@
 /*
 
-    Busca Sequencial
+    Busca Sequencial - A única vantagem em relação a binária é que ela pode pesquisar em listas não preordenadas.
 
     Percorre a lista de valores em busca de um valor especificado.
     Quando encontra o valor, retorna a posição correspondente a ele.
