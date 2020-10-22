@@ -7,7 +7,7 @@ const Stack = require('./lib/Stack2')
 
 let analisador = new Stack()
 
-let expr = '3 * {​​ 5 - 2 / [3 * 4 + (12 / 5)]}​​ + 5 * (4 - 2'
+let expr = '3 * {​​ 5 - 2 / [3 * 4 + (12 / 5)]}​​'
 //let expr = '8 - { 5 * (3 + 7])}'
 let info
 
@@ -16,15 +16,15 @@ for(let i = 0; i < expr.length; i++) {
         case '{':
             analisador.push({tipo: 'CH', pos: i})
             console.log(analisador)
-            break;
+            break
         case '[':
             analisador.push({tipo: 'CO', pos: i})
             console.log(analisador)
-            break;
+            break
         case '(':
             analisador.push({tipo: 'PA', pos: i})
             console.log(analisador)
-            break;
+            break
         case '}':
             info = analisador.pop()
             if(info && info.tipo == 'CH') {      // Se retornou dados
