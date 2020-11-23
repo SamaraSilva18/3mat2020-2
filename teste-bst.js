@@ -31,3 +31,8 @@ console.log('Pré-ordem', vet)
 vet = []
 arvore.postOrderTravessal(n => vet.push(n.data))
 console.log('Pós-ordem', vet)
+
+console.log('Mínimo: ', arvore.min())
+
+arvore.insert(5)
+console.log('Mínimo: ', arvore.min())
