@@ -25,11 +25,11 @@ arvore.inOrderTraversal(n => vet.push(n.data))
 console.log(vet)
 
 vet = []
-arvore.preOrderTravessal(n => vet.push(n.data))
+arvore.preOrderTraversal(n => vet.push(n.data))
 console.log('Pré-ordem', vet)
 
 vet = []
-arvore.postOrderTravessal(n => vet.push(n.data))
+arvore.preOrderTraversal(n => vet.push(n.data))
 console.log('Pós-ordem', vet)
 
 console.log('Mínimo: ', arvore.min())
@@ -77,6 +77,11 @@ arvore.inOrderTraversal(n => vet.push(n.data))
 console.log('Em-ordem', vet)
 
 arvore.remove(31) // Grau 2 (raiz!!)
+vet = []
+arvore.inOrderTraversal(n => vet.push(n.data))
+console.log('Em-ordem', vet)
+
+arvore.remove(12) // Grau 2
 vet = []
 arvore.inOrderTraversal(n => vet.push(n.data))
 console.log('Em-ordem', vet)
